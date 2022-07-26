@@ -15,7 +15,8 @@ articles into 5 categories namely:
 To develop a LSTM Model using DL approach(sentiment analysis) which can achieve accuracy of more 
 than 70% and F1 score of more than 0.7 and only allowed to use TensorFlow library 
 
-# software used:GOOGLE COLAB
+# software used:
+GOOGLE COLAB
 obstacle during model construction is unable to compute module for the textanalysis model due to longer runtime.This maybe due to unstable
 connection. 
 
@@ -94,7 +95,7 @@ So, the model is trained back with  the epoch of 50, nodes 128, 2 layers and the
 
 # Dataset Credit 
 Thanks to
-https://raw.githubusercontent.com/susanli2016/PyCon-Canada-2019-NLPTutorial/master/bbc-text.csv
+(https://raw.githubusercontent.com/susanli2016/PyCon-Canada-2019-NLP-Tutorial/master/bbc-text.csv)
 
 
 
