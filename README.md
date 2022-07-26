@@ -66,7 +66,7 @@ The preprocessing as below were carried out and the dataset were split train and
 
 The model were constructed using sequential. Embedding, Bidirectional, LSTM, Dropout, Dense, Input used to improve the model construction.
 
-At the first, the model were running as per above with the epoch of 5 and nodes of 128 with 2 layers and it's lead to underfitting issue where the accuracy/f1 score obtained is at very low.
+At the first, the model were running as per above with the epoch of 5 and nodes of 128 with 2 layers and it's lead to overfitting issue where the accuracy/f1 score obtained is at very low.
 
 ![Confusion_Matrix before](https://user-images.githubusercontent.com/109565405/180985309-9ebe7fac-3fac-4535-9fdb-5220c4387f9c.PNG)
 
@@ -90,7 +90,7 @@ The epoch acc and loss also displayed in tensorboard:
 
 # Discussion
 
-The model achieved 0.41 accuracy at the first training model where all the f1 score is below 0.5 averagely. The model indicated towards underfitting issue.
+The model achieved 0.41 accuracy at the first training model where all the f1 score is below 0.5 averagely. The model indicated towards overfitting issue.
 So, the model is trained back with  the epoch of 50, nodes 128, 2 layers and the used of early callback were implemented. The accuracy has increased to 0.81 and the f1 increased by 0.7 above.
 
 # Dataset Credit 
