@@ -21,6 +21,8 @@ import pandas as pd
 
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report
+
 
 from tensorflow.keras.layers import LSTM,Dense,Dropout,Bidirectional,Embedding
 from tensorflow.keras.preprocessing.text import Tokenizer,tokenizer_from_json
@@ -61,7 +63,7 @@ print(df['category'][5])
 
 # Step 3) Data cleaning
     # Process that need to be done before further analysis:
-         #1. Need to remove duplicates
+         # Need to remove duplicates
 
 #remove duplicated data 
 df= df.drop_duplicates()
@@ -81,8 +83,6 @@ for index,txt in enumerate(text):
 # 1) Tokenization
 #text need to used for tokenization
 
-from tensorflow.keras.preprocessing.text import Tokenizer
-
 vocab_size=10000
 oov_token='<OOV>'
 
@@ -95,11 +95,10 @@ print(dict(list(word_index.items())[0:10]))
 text_int=tokenizer.texts_to_sequences(text)
 text_int[1000]
 
-#2) padding (to make sure all of them in equal length numbers)
+#2) padding (to ensure all of them in equal length numbers)
 # List comprehension
 max_len=np.median([len(text_int[i])for i in range(len(text_int))])
 
-from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 padded_text=pad_sequences(text_int,maxlen=int(max_len),padding='post',truncating='post')
 
